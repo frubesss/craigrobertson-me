@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Blog - Craig Robertson</title>
+    <title>Welcome to My Blog - Craig Robertson</title>
 
     <style>
 
@@ -44,12 +44,11 @@
 
         p {
             color: #fff;
+            line-height: 1.8;
         }
 
-        #header {
-            margin: 0;
+        h1, h2, h3 {
             color: #fff;
-            text-align: center;
         }
 
         #back-link {
@@ -57,45 +56,40 @@
             margin-bottom: 2rem;
         }
 
-        #blog-posts {
+        #post-content {
             width: 42rem;
             max-width: 100%;
         }
 
-        .blog-post {
-            border-top: 1px solid #ffffff24;
+        #post-header {
             border-bottom: 1px solid #ffffff24;
-            padding: 1.5rem 0;
-            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
         }
 
-        .blog-post h2 {
+        #post-title {
             margin: 0 0 0.5rem 0;
-            color: #fff;
         }
 
-        .blog-post .date {
+        #post-date {
             color: #ffffffaa;
             font-size: 0.85rem;
-            margin-bottom: 0.75rem;
         }
 
-        .blog-post .excerpt {
-            color: #fff;
-            line-height: 1.6;
-            margin-bottom: 0.75rem;
+        #post-body {
+            margin-bottom: 2rem;
         }
 
-        .blog-post .read-more {
+        ul {
             color: #fff;
-            font-weight: bold;
+            text-align: left;
         }
 
     </style>
 
     <meta name="description" content="Craig Robertson's Blog">
-    <meta property="og:title" content="Blog - Craig Robertson">
-    <meta property="og:description" content="Thoughts and experiences in software engineering">
+    <meta property="og:title" content="Welcome to My Blog - Craig Robertson">
+    <meta property="og:description" content="This is my first blog post. I'm excited to share my thoughts and experiences in software engineering.">
 
     <link rel="icon" type="image/png" href="./favicon.png">
 
@@ -106,47 +100,39 @@
         <div id="back-link">
             <a href="/">← Back to Home</a>
         </div>
-        <h1 id='header'>Blog</h1>
-        <div id="blog-posts">
-            <!-- Blog posts will be loaded here by JavaScript -->
+        <div id="post-content">
+            <div id="post-header">
+                <h1 id="post-title">Welcome to My Blog</h1>
+                <div id="post-date">January 15, 2024</div>
+            </div>
+            <div id="post-body">
+                <p>Welcome to my blog! I'm excited to start sharing my thoughts, experiences, and insights about software engineering, technology, and the projects I work on.</p>
+
+                <h2>Why Start a Blog?</h2>
+
+                <p>After 10 years in the IT industry, I've learned a lot through both successes and challenges. I believe in sharing knowledge and contributing to the developer community that has helped me grow throughout my career.</p>
+
+                <h2>What to Expect</h2>
+
+                <p>On this blog, I'll be writing about:</p>
+
+                <ul>
+                    <li>Software engineering best practices</li>
+                    <li>React and React Native development</li>
+                    <li>TypeScript tips and patterns</li>
+                    <li>Serverless architecture</li>
+                    <li>Mobile and web application development</li>
+                    <li>Open-source projects I'm working on</li>
+                </ul>
+
+                <h2>Stay Connected</h2>
+
+                <p>I hope you find the content here helpful and interesting. Feel free to reach out to me via <a href="mailto:robertson.cra@gmail.com">email</a> or connect with me on <a href="https://github.com/frubesss" target="_blank">GitHub</a> and <a href="https://www.linkedin.com/in/robertsoncra" target="_blank">LinkedIn</a>.</p>
+
+                <p>Thanks for reading, and stay tuned for more posts!</p>
+            </div>
         </div>
     </div>
-
-    <script>
-        // Load blog posts from JSON
-        fetch('blog-posts.json')
-            .then(response => response.json())
-            .then(posts => {
-                const container = document.getElementById('blog-posts');
-                
-                // Sort posts by date (newest first)
-                posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-                
-                posts.forEach(post => {
-                    const postElement = document.createElement('div');
-                    postElement.className = 'blog-post';
-                    
-                    const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
-                    });
-                    
-                    postElement.innerHTML = `
-                        <h2><a href="blog-post.html?id=${post.id}">${post.title}</a></h2>
-                        <div class="date">${formattedDate}</div>
-                        <p class="excerpt">${post.excerpt}</p>
-                        <a class="read-more" href="blog-post.html?id=${post.id}">Read more →</a>
-                    `;
-                    
-                    container.appendChild(postElement);
-                });
-            })
-            .catch(error => {
-                console.error('Error loading blog posts:', error);
-                document.getElementById('blog-posts').innerHTML = '<p>Error loading blog posts.</p>';
-            });
-    </script>
 </body>
 
 </html>
