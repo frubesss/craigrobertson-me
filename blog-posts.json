@@ -1,0 +1,16 @@
+[
+  {
+    "id": "welcome-to-my-blog",
+    "title": "Welcome to My Blog",
+    "date": "2024-01-15",
+    "excerpt": "This is my first blog post. I'm excited to share my thoughts and experiences in software engineering.",
+    "content": "blog-posts/welcome-to-my-blog.html"
+  },
+  {
+    "id": "my-journey-with-react",
+    "title": "My Journey with React and TypeScript",
+    "date": "2024-02-01",
+    "excerpt": "Reflections on working with React and TypeScript in production applications over the past few years.",
+    "content": "blog-posts/my-journey-with-react.html"
+  }
+]
