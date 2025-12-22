@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="theme-color" content="#436DBF">
 
     <title>Craig Robertson - Mobile App Engineer</title>
 
@@ -21,7 +22,6 @@
 
         body {
             background-color: #436DBF;
-
         }
 
         #wrapper {
@@ -38,8 +38,12 @@
             color: #fff;
         }
 
-        a:hover {
+        a:hover,
+        a:focus {
             color: #fff;
+            text-decoration: underline;
+            outline: 2px solid #fff;
+            outline-offset: 2px;
         }
 
         p {
@@ -47,10 +51,9 @@
             margin: 10px;
         }
 
-        ol {
-            list-style: none;
-            display: flex;
-            padding-left: 0;
+        nav div {
+            color: #fff;
+            margin: 10px;
         }
 
         #body-text {
@@ -62,13 +65,9 @@
             margin-top: 1rem;
         }
 
-        #header {
+        h1 {
             margin: 0 0 0.25rem 0;
             color: #fff;
-        }
-
-        li:not(:last-child) {
-            margin-right: 10px;
         }
 
     </style>
@@ -77,6 +76,8 @@
     <meta content="Craig Robertson - Mobile App Engineer" property="og:title">
     <meta content="Mobile App Engineer - I design, build, and ship complete iOS & Android apps using React Native/Expo." property="og:description">
     <meta content="https://craigrobertson.me/favicon.png" property="og:image">
+    <meta content="64" property="og:image:width">
+    <meta content="64" property="og:image:height">
     <meta content="website" property="og:type">
     <meta content="https://craigrobertson.me" property="og:url">
 
@@ -84,28 +85,31 @@
     <meta name="twitter:title" content="Craig Robertson - Mobile App Engineer">
     <meta name="twitter:description" content="Mobile App Engineer - I design, build, and ship complete iOS & Android apps using React Native/Expo.">
     <meta name="twitter:image" content="https://craigrobertson.me/favicon.png">
+    <meta name="twitter:image:width" content="64">
+    <meta name="twitter:image:height" content="64">
 
     <link href="./favicon.png" rel="icon" type="image/png">
+    <link href="./favicon.png" rel="apple-touch-icon">
 
 </head>
 
 <body>
 <main id="wrapper">
     <header>
-        <h1 id="header">Craig Robertson</h1>
-        <p>Mobile App Engineer - I design, build, and ship complete iOS & Android apps using React Native/Expo</p>
+        <h1>Craig Robertson</h1>
+        <p>Mobile App Engineer – I design, build, and ship complete iOS & Android apps using React Native/Expo</p>
     </header>
     <nav>
-        <p>
-            <a href="mailto:robertson.cra@gmail.com" rel="noopener noreferrer" target="_blank" aria-label="Email robertson.cra@gmail.com (opens in new tab)">robertson.cra@gmail.com</a> |
+        <div>
+            <a href="mailto:robertson.cra@gmail.com" aria-label="Email robertson.cra@gmail.com">robertson.cra@gmail.com</a> |
             <a href="https://wa.me/447739431302" rel="noopener noreferrer" target="_blank" aria-label="WhatsApp +447739431302 (opens in new tab)">+447739431302</a>
-        </p>
-        <p>
+        </div>
+        <div>
             <a href="https://github.com/frubesss" rel="noopener noreferrer" target="_blank" aria-label="GitHub profile (opens in new tab)">GitHub</a> |
             <a href="https://www.linkedin.com/in/robertsoncra" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn profile (opens in new tab)">LinkedIn</a> |
             <a href="https://apps.apple.com/us/developer/craig-robertson/id1291727825" rel="noopener noreferrer"
                target="_blank" aria-label="App Store apps (opens in new tab)">Apps</a>
-        </p>
+        </div>
     </nav>
     <section id="body-text">
         <p>I have experience working at all levels of the software engineering stack. From creating serverless APIs to
